@@ -1,0 +1,54 @@
+should home, about, projects feed and blog feed be on same page??
+sidebar would direct to page anchor, jQ to change highlight based on view height to 'scroll with you'
+projects and blog lead to larger projects/blog page, where front page feed is just the most recent
+
+WOULD BE NICE:
+header and footer in compositor
+give titles decent names eg 'Alyssa's Projects'
+.md for posts
+
+SIDEBAR:
+highlight current page
+add toggle button of small folder tab in top left
+
+TEMPLATES:
+change columns to fit
+    HOME:
+    combine with about? if scrolling, parallax?
+
+PROJECTS:
+    project feed, md or json??
+BLOG: same thing
+
+
+
+NEEDS DOING:
+
+TEMPLATES:
+all
+
+MODELS:
+projects first
+all
+
+COLLECTIONS:
+projects first
+all
+
+CSS
+
+---------------------------
+
+REFACTOR DONE:
+strings
+router
+main
+app
+
+VIEWS:
+about
+blog
+home
+projects
+navbar
+main compositor

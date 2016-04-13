@@ -1,0 +1,22 @@
+<div class="section" id="projects-section">
+    <div id="projects" class="section-anchor"></div>
+
+            <p>Here's some things I made:</p>
+            <div class="projects-container">
+                {{#each this}}
+                    <div class="col-sm-4 flex-col">
+                        <div class="thumbnail">
+                            <p>{{this.title}}</p>
+                            <a href="">
+                                <img src="/assets/twitter-icon.png" alt="{{this.title}}">
+                            </a>
+                            <div class="caption">
+                                <p>{{this.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+
+</div>

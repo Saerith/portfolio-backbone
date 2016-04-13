@@ -1,0 +1,172 @@
+* {
+  max-width: 100%; }
+
+#intro-section > .container-fluid {
+  top: 10%;
+  height: 100%; }
+
+#logo {
+  height: 60%;
+  width: 100%; }
+
+.row-fluid {
+  display: flex;
+  align-items: flex-end; }
+
+#logo > div {
+  border: .2em solid #FFF;
+  border-radius: 20px;
+  text-align: center;
+  color: #FFF;
+  font-size: 500%; }
+
+#brand > div {
+  text-align: center;
+  position: relative;
+  color: #FFF;
+  font-size: 200%; }
+
+#content {
+  width: 100%;
+  position: absolute;
+  padding: 0; }
+
+#intro-section {
+  background-image: url("../assets/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 70vh;
+  width: 100%; }
+
+#about-section h1 {
+  font-family: 'Indie Flower', cursive;
+  padding-left: 10px; }
+
+#about-section p {
+  margin: 0;
+  font-size: 120%;
+  font-family: 'Noto Serif', cursive;
+  padding-left: 10px; }
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+  .projects-container .flex-col {
+    display: flex; }
+
+/* thanks https://github.com/BlackrockDigital/startbootstrap-simple-sidebar */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-left: 165px; }
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 165px; }
+
+#wrapper.toggled #content {
+  position: absolute;
+  margin-right: -165px; }
+
+/* Sidebar Styles */
+#sidebar-wrapper {
+  z-index: 1000;
+  max-height: 100%;
+  position: fixed;
+  left: 165px;
+  width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: center;
+  margin-left: -165px;
+  background: #000;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  #sidebar-wrapper .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 165px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left; }
+    #sidebar-wrapper .sidebar-nav .sidebar-brand {
+      height: 65px;
+      font-size: 16px;
+      line-height: 60px;
+      white-space: nowrap; }
+      #sidebar-wrapper .sidebar-nav .sidebar-brand a {
+        color: #999999; }
+      #sidebar-wrapper .sidebar-nav .sidebar-brand a:hover {
+        color: #fff;
+        background: none; }
+    #sidebar-wrapper .sidebar-nav label {
+      text-indent: 20px;
+      line-height: 40px;
+      text-align: left;
+      width: 100%;
+      position: relative; }
+      #sidebar-wrapper .sidebar-nav label a {
+        display: block;
+        text-decoration: none;
+        color: #999999; }
+      #sidebar-wrapper .sidebar-nav label a:hover {
+        text-decoration: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2); }
+      #sidebar-wrapper .sidebar-nav label a:active, #sidebar-wrapper .sidebar-nav label a:focus {
+        text-decoration: none; }
+  #sidebar-wrapper .sidebar-anchor {
+    display: flex;
+    height: 100%; }
+  #sidebar-wrapper .sidebar-end {
+    top: 0;
+    width: 165px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    #sidebar-wrapper .sidebar-end img {
+      width: 45px;
+      height: 45px;
+      margin: 2px; }
+    #sidebar-wrapper .sidebar-end label {
+      white-space: nowrap; }
+
+/* Desktop rules */
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 165px; }
+
+  #wrapper.toggled {
+    padding-left: 0; }
+
+  #sidebar-wrapper {
+    width: 165px; }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0; }
+
+  #content {
+    padding: 0;
+    position: relative; }
+
+  #wrapper.toggled #content {
+    position: relative;
+    margin-right: 0; } }
+
+/*# sourceMappingURL=main.css.map */
