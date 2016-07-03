@@ -2,7 +2,12 @@
   max-width: 100%;
 }
 
-#intro-section > .container-fluid {
+// prevents X axis scrollbar when sidebar transitions
+body {
+  overflow-x: hidden;
+}
+
+#intro-section .container-fluid {
   top: 10%;
   height: 100%;
 }
@@ -35,10 +40,10 @@
 #content {
   width: 100%;
   position: absolute;
-  padding: 0;
+  padding:0;
 }
 
-#intro-section {
+#intro-section > .intro-bg {
   background-image: url('../assets/bg2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,26 +53,101 @@
   width: 100%;
 }
 
-#about-section h1 {
+#intro-section h1 {
   font-family: 'Indie Flower', cursive;
   padding-left: 10px;
 }
 
-#about-section p {
+#intro-section p {
   margin: 0;
   font-size: 120%;
   font-family: 'Noto Serif', cursive;
   padding-left: 10px;
 }
 
+#about-section {
+  p {
+    margin: 0;
+    font-size: 120%;
+    font-family: 'Noto Serif', cursive;
+    padding-left: 10px;
+  }
+  .my-photo {
+    height: 50vh;
+  }
+
+}
+
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  .flex-col {
+  padding-left: 10px;
+  .thumbnail {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    width: 95%;
+    margin: 5px;
+    text-align: center;
 
+  }
+  .project-top {
+    //display: flex;
+    //z-index: 100;
+    //align-self: flex-start;
+    width: 100%;
+    //position: absolute;
+    text-align: center;
+    display: block;
 
+  }
+  .project-middle {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-bottom: auto;
+
+    //margin-left: auto;
+    //margin-right: auto;
+    align-content: center;
+    text-align: center;
+    //flex-grow: 1;
+    a {
+      width: 100%;
+    }
+    object, img {
+      align-self: center;
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -moz-transition: all 1s ease; /* Firefox */
+      -ms-transition: all 1s ease; /* IE 9 */
+      -o-transition: all 1s ease; /* Opera */
+      transition: all 1s ease;
+      max-width: 50%;
+    }
+    object:hover, img:hover {
+      -webkit-transform:scale(1.1); /* Safari and Chrome */
+      -moz-transform:scale(1.1); /* Firefox */
+      -ms-transform:scale(1.1); /* IE 9 */
+      -o-transform:scale(1.1); /* Opera */
+      transform:scale(1.1);
+    }
+  }
+  .project-bottom {
+    padding-top: 5px;
+    display: flex;
+    z-index: 100;
+    align-self: flex-end;
+    //text-align: left;
+    width: 100%;
+
+  }
+
+  @media(min-width:768px) {
+    .thumbnail {
+      width: 31%;
+    }
   }
 }
 
@@ -108,6 +188,8 @@
   margin-left: -165px;
   background: #000;
   overflow-y: auto;
+  overflow-x: hidden;
+
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -140,30 +222,31 @@
       }
     }
 
-    label {
-      text-indent: 20px;
-      line-height: 40px;
-      text-align: left;
-      width: 100%;
-      position: relative;
+  }
+  //label button styles
+  .nav-button {
+    text-indent: 20px;
+    line-height: 40px;
+    text-align: left;
+    width: 100%;
+    position: relative;
 
-      a {
-        display: block;
-        text-decoration: none;
-        color: #999999;
-      }
-
-      a:hover {
-        text-decoration: none;
-        color: #fff;
-        background: rgba(255,255,255,0.2);
-      }
-
-      a:active, a:focus {
-        text-decoration: none;
-      }
-
+    a {
+      display: block;
+      text-decoration: none;
+      color: #999999;
     }
+
+    a:hover {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+    }
+
+    a:active, a:focus {
+      text-decoration: none;
+    }
+
   }
 
   .sidebar-anchor {
@@ -176,11 +259,14 @@
     width:  165px;
     margin: 0;
     padding: 0;
-    text-align: center;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    flex-direction: row;
+    white-space: nowrap;
+    text-align: left;
+    //overflow-x: hidden;
+    //position: relative;
+    //display: flex;
+    //align-content: flex-end;
+    //flex-wrap: wrap;
+    //flex-direction: row;
 
     img {
       width: 45px;
@@ -191,7 +277,13 @@
       white-space: nowrap;
     }
   }
-}
+
+
+
+  /* blog rules */
+
+
+
 
 /* Desktop rules */
 @media(min-width:768px) {

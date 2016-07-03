@@ -1,7 +1,10 @@
 * {
   max-width: 100%; }
 
-#intro-section > .container-fluid {
+body {
+  overflow-x: hidden; }
+
+#intro-section .container-fluid {
   top: 10%;
   height: 100%; }
 
@@ -31,7 +34,7 @@
   position: absolute;
   padding: 0; }
 
-#intro-section {
+#intro-section > .intro-bg {
   background-image: url("../assets/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,8 +42,14 @@
   height: 70vh;
   width: 100%; }
 
-#about-section h1 {
+#intro-section h1 {
   font-family: 'Indie Flower', cursive;
+  padding-left: 10px; }
+
+#intro-section p {
+  margin: 0;
+  font-size: 120%;
+  font-family: 'Noto Serif', cursive;
   padding-left: 10px; }
 
 #about-section p {
@@ -48,13 +57,66 @@
   font-size: 120%;
   font-family: 'Noto Serif', cursive;
   padding-left: 10px; }
+#about-section .my-photo {
+  height: 50vh; }
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; }
-  .projects-container .flex-col {
-    display: flex; }
+  flex-direction: row;
+  padding-left: 10px; }
+  .projects-container .thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    width: 95%;
+    margin: 5px;
+    text-align: center; }
+  .projects-container .project-top {
+    width: 100%;
+    text-align: center;
+    display: block; }
+  .projects-container .project-middle {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-bottom: auto;
+    align-content: center;
+    text-align: center; }
+    .projects-container .project-middle a {
+      width: 100%; }
+    .projects-container .project-middle object, .projects-container .project-middle img {
+      align-self: center;
+      -webkit-transition: all 1s ease;
+      /* Safari and Chrome */
+      -moz-transition: all 1s ease;
+      /* Firefox */
+      -ms-transition: all 1s ease;
+      /* IE 9 */
+      -o-transition: all 1s ease;
+      /* Opera */
+      transition: all 1s ease;
+      max-width: 50%; }
+    .projects-container .project-middle object:hover, .projects-container .project-middle img:hover {
+      -webkit-transform: scale(1.1);
+      /* Safari and Chrome */
+      -moz-transform: scale(1.1);
+      /* Firefox */
+      -ms-transform: scale(1.1);
+      /* IE 9 */
+      -o-transform: scale(1.1);
+      /* Opera */
+      transform: scale(1.1); }
+  .projects-container .project-bottom {
+    padding-top: 5px;
+    display: flex;
+    z-index: 100;
+    align-self: flex-end;
+    width: 100%; }
+  @media (min-width: 768px) {
+    .projects-container .thumbnail {
+      width: 31%; } }
 
 /* thanks https://github.com/BlackrockDigital/startbootstrap-simple-sidebar */
 #wrapper {
@@ -89,6 +151,7 @@
   margin-left: -165px;
   background: #000;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -111,22 +174,22 @@
       #sidebar-wrapper .sidebar-nav .sidebar-brand a:hover {
         color: #fff;
         background: none; }
-    #sidebar-wrapper .sidebar-nav label {
-      text-indent: 20px;
-      line-height: 40px;
-      text-align: left;
-      width: 100%;
-      position: relative; }
-      #sidebar-wrapper .sidebar-nav label a {
-        display: block;
-        text-decoration: none;
-        color: #999999; }
-      #sidebar-wrapper .sidebar-nav label a:hover {
-        text-decoration: none;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.2); }
-      #sidebar-wrapper .sidebar-nav label a:active, #sidebar-wrapper .sidebar-nav label a:focus {
-        text-decoration: none; }
+  #sidebar-wrapper .nav-button {
+    text-indent: 20px;
+    line-height: 40px;
+    text-align: left;
+    width: 100%;
+    position: relative; }
+    #sidebar-wrapper .nav-button a {
+      display: block;
+      text-decoration: none;
+      color: #999999; }
+    #sidebar-wrapper .nav-button a:hover {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2); }
+    #sidebar-wrapper .nav-button a:active, #sidebar-wrapper .nav-button a:focus {
+      text-decoration: none; }
   #sidebar-wrapper .sidebar-anchor {
     display: flex;
     height: 100%; }
@@ -135,11 +198,8 @@
     width: 165px;
     margin: 0;
     padding: 0;
-    text-align: center;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    flex-direction: row; }
+    white-space: nowrap;
+    text-align: left; }
     #sidebar-wrapper .sidebar-end img {
       width: 45px;
       height: 45px;

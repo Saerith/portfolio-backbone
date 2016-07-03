@@ -4,19 +4,24 @@
             <p>Here's some things I made:</p>
             <div class="projects-container">
                 {{#each this}}
-                    <div class="col-sm-4 flex-col">
-                        <div class="thumbnail">
-                            <p>{{this.title}}</p>
-                            <a href="">
-                                <img src="/assets/twitter-icon.png" alt="{{this.title}}">
-                            </a>
-                            <div class="caption">
-                                <p>{{this.description}}</p>
-                            </div>
-                        </div>
+
+                <div class="thumbnail">
+                    <div class="project-top">
+                        <p>{{this.title}}</p>
                     </div>
+                    <div class="project-middle">
+                        <a href="{{this.url}}" target="_blank">
+                            <object data="{{this.image}}" type="image/png">
+                                <img src="assets/unsc_placeholder.png">
+                            </object>
+                        </a>
+                    </div>
+                    <div class="project-bottom">
+                        <p>{{this.description}}</p>
+                    </div>
+                </div>
+
                 {{/each}}
-            </div>
 
-
+            </div> <!-- proj cont-->
 </div>

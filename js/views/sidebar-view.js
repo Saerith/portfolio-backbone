@@ -33,6 +33,22 @@ define([
             this.$el.html(this.template());
             return this;
 
+        },
+
+        home: function() {
+            Backbone.history.navigate('home', {trigger: true});
+        },
+
+        about: function() {
+            Backbone.history.navigate('about', {trigger: true});
+        },
+
+        projects: function() {
+            Backbone.history.navigate('projects', {trigger: true});
+        },
+
+        blog: function() {
+            Backbone.history.navigate('blog', {trigger: true});
         }
 
     });

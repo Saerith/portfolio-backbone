@@ -24,8 +24,8 @@ define([
             'home': 'home',
             'projects': 'projects',
             'blog': 'blog',
-            '' : 'getProjects',
-            '*splat': 'home'
+            'xxx' : 'getProjects',
+            //'*splat': 'home'
         },
 
         initialize: function() {
@@ -60,7 +60,9 @@ define([
     return {
         initialize: function() {
             var app_router = new AppRouter;
-            Backbone.history.start();
+            Backbone.history.start(
+                {pushState: true, root: '/'}
+            );
         }
     };
 });

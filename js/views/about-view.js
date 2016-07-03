@@ -19,7 +19,7 @@ define([
         },
 
         events: {
-            'click #sidebar-toggle': 'sidebarToggle'
+            //'click #sidebar-toggle': 'sidebarToggle'
         },
 
         render: function() {
@@ -27,11 +27,11 @@ define([
             return this;
         },
 
-        sidebarToggle: function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-
-        }
+        // sidebarToggle: function(e) {
+        //         e.preventDefault();
+        //         $("#wrapper").toggleClass("toggled");
+        //
+        // }
     });
     return AboutView;
 });
